@@ -29,7 +29,7 @@ import com.mrl.spring.annotation.contition.WindowsCondition;
 //        @Filter(type=FilterType.ANNOTATION,classes=Repository.class)
 //})
 @ComponentScan(value = "com.mrl.spring")
-@Import({Color.class, MyImportSelector.class, MyImportBeanDefinitionRegistrar.class }) //快速导入组件  组件名为全类名//MyImportSelector自定义扫描
+@Import({ Color.class,MyImportSelector.class, MyImportBeanDefinitionRegistrar.class }) //快速导入组件  组件名为全类名//MyImportSelector自定义扫描
 public class MainConfig
 {
 

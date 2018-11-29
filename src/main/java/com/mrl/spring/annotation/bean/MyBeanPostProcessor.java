@@ -1,6 +1,5 @@
 package com.mrl.spring.annotation.bean;
 
-import static org.hamcrest.CoreMatchers.instanceOf;
 
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.config.BeanPostProcessor;

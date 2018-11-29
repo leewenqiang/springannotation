@@ -35,6 +35,7 @@ public class IOCTest_AOP
     public void test1() {
         MathCalculate bean = ioc.getBean(MathCalculate.class);
         int divide = bean.divide(2,0);
+        System.out.println("res:"+divide);
     }
 
 }

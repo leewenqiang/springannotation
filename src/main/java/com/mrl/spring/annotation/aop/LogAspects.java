@@ -3,13 +3,9 @@ package com.mrl.spring.annotation.aop;
 import java.util.Arrays;
 
 import org.aspectj.lang.JoinPoint;
+import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.Signature;
-import org.aspectj.lang.annotation.After;
-import org.aspectj.lang.annotation.AfterReturning;
-import org.aspectj.lang.annotation.AfterThrowing;
-import org.aspectj.lang.annotation.Aspect;
-import org.aspectj.lang.annotation.Before;
-import org.aspectj.lang.annotation.Pointcut;
+import org.aspectj.lang.annotation.*;
 
 /**
  *  
@@ -53,4 +49,23 @@ public class LogAspects
     public void logException(Exception e) {
         System.out.println("除法Exception:"+e);
     }
+
+    /**
+     * @Author lwq
+     * @Description 环绕通知
+     * @Date 2018/11/28 9:31
+     * @Param [proceedingJoinPoint]
+     * @return void
+     **/
+//    @Around("pointCut()")
+    public Object logAround(ProceedingJoinPoint proceedingJoinPoint){
+        Object object = new Object();
+        try {
+            object = proceedingJoinPoint.proceed();
+        } catch (Throwable throwable) {
+            throwable.printStackTrace();
+        }
+        return object;
+    }
+
 }

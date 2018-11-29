@@ -12,7 +12,7 @@ public class MyImportSelector implements ImportSelector
     //AnnotationMetadata:当前标注Import注解的类的所有信息
     @Override
     public String[] selectImports(AnnotationMetadata importingClassMetadata) {
-        
+
         //不能返回null值
 
         return new String[] {"com.mrl.spring.annotation.bean.Blue","com.mrl.spring.annotation.bean.Yellow"};

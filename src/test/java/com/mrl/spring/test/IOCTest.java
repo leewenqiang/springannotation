@@ -61,12 +61,16 @@ public class IOCTest
     public void testIMport() {
         printBeans();
         //工厂bean获取的是调用getObject返回的对象
-//        Object o = ioc.getBean("myFactoryBean");
-//        System.out.println("O;"+o);
+        Object o = ioc.getBean("myFactoryBean");
+        Object o1 = ioc.getBean("myFactoryBean");
+
+        Object o2 = ioc.getBean("myFactoryBean");
+
+        System.out.println("O;"+o);
         
       //工厂bean获取的是调用getObject返回的对象
-      Object o = ioc.getBean("&myFactoryBean");
-      System.out.println("O;"+o);
+//      Object o = ioc.getBean("&myFactoryBean");
+//      System.out.println("O;"+o);
     }
 
 }

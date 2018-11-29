@@ -2,6 +2,7 @@ package com.mrl.spring.test;
 
 import java.util.Arrays;
 
+import com.mrl.spring.annotation.bean.Car;
 import org.junit.Before;
 import org.junit.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
@@ -24,7 +25,7 @@ public class IOCTestLifeCycle
 
     @Test
     public void test1() {
-        Dog bean = ioc.getBean(Dog.class);
+        Car bean = ioc.getBean(Car.class);
         System.out.println(bean);
         //容器关闭的时候销毁bean
         ioc.close();

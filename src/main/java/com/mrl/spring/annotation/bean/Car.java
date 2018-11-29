@@ -1,8 +1,15 @@
 package com.mrl.spring.annotation.bean;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 public class Car
 {
-    
+
+
+
+    @Autowired
+    Person p;
+
     private String name;
     
     public Car() {
